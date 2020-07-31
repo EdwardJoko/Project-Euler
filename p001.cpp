@@ -7,13 +7,10 @@ using namespace std;
 int compute(int num)
 {
     int sum = 0;
-    int i = 1;
 
-    while (i < num) {
-        if (i % 3 == 0 || i % 5 == 0) sum += i;
-
-        i += 1;
-    }
+    for (int i = 1; i < num; ++i)
+        if (i % 3 == 0 || i % 5 == 0)
+            sum += i;
 
     return sum;
 }
@@ -24,9 +21,9 @@ int main()
     cout << "The sum of multiple of 3 or 5 below 1000." << endl;
     cout << compute(1000) << endl;
 
-    cout << "\nInput the new integer limit other than 1000:\t";
-    unsigned long int new_limit; cin >> new_limit;
-    cout << compute(new_limit) << endl;
+    cout << "\nInput the new integer limit other than 1000.\n";
+    cin >> limit;
+    cout << compute(limit) << endl;
 
     return 0;
 }

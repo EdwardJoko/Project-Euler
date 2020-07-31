@@ -1,5 +1,5 @@
 // Project Euler
-// Problem 6: The difference between the sum of the squares of the 
+// Problem 6: The difference between the sum of the squares of the
 //            first one hundred natural numbers and the square of
 //            the sum
 
@@ -22,9 +22,9 @@ int main()
     cout << "the sum." << endl;
     cout << compute(limit) << endl;
 
-    cout << "Give the new integer limit!\t";
-    int new_limit; cin >> new_limit;
-    cout << compute(new_limit) << endl;
+    cout << "Give the new integer limit other than 100.\n";
+    cin >> limit;
+    cout << compute(limit) << endl;
 
     return 0;
 }

@@ -35,10 +35,10 @@ int main()
     cout << compute(limit) << endl;
 
     cout <<  "\nGive the new integer as limit." << endl;
-    int new_limit; cin >> new_limit;
+    cin >> limit;
 
-    cout << "The sum of prime numbers below " << new_limit << " is: ";
-    cout << compute(new_limit) << endl;
+    cout << "The sum of prime numbers below " << limit << " is: ";
+    cout << compute(limit) << endl;
 
     return 0;
 }

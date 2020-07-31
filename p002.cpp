@@ -28,9 +28,9 @@ int main()
     cout << "The sum of even Fibonacci number under 4000000." << endl;
     cout << compute(limit) << endl;
 
-    cout << "Input another integer for the new limit other than 4000000:\t";
-    unsigned long int new_limit; cin >> new_limit;
-    cout << compute(new_limit) << endl;
+    cout << "Input another integer for the new limit other than 4000000.\n";
+    cin >> limit;
+    cout << compute(limit) << endl;
 
     return 0;
 }

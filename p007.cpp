@@ -46,11 +46,11 @@ int main()
         size *= 10;   // assuming the limit-th prime will be in the range of limit*10
     }
 
-    cout << "Input another limit other than 10001.\t";
-    int new_limit; cin >> new_limit;
-    size = new_limit * 10;
+    cout << "Input another limit other than 10001.\n";
+    cin >> limit;
+    size = limit * 10;
 
-    while (!Eratosthenes_Sieve(new_limit, size)) {
+    while (!Eratosthenes_Sieve(limit, size)) {
         size *= 10;   // assuming the limit-th prime will be in the range of limit*10
     }
 

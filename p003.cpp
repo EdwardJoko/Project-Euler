@@ -35,10 +35,10 @@ int main()
     unsigned long long int num = 600851475143;
     cout << compute(num) << endl;
 
-    cout << "Give the integer that you want to know the largest "
-         << "prime factor of it.\t";
-    unsigned long long int new_num; cin >> new_num;
-    cout << compute(new_num) << endl;
+    cout << "Give the integer that you want to know the largest\n"
+         << "prime factor of it.\n";
+    cin >> num;
+    cout << compute(num) << endl;
 
     return 0;
 }

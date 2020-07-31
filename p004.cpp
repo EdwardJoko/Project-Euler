@@ -48,7 +48,7 @@ unsigned long int *palindrome_generator(int length_of_digit)
 
     while (num >= bottom_limit) {
         if (palindrome_checker(to_string(num))) {
-            for (int i = first_divider; i >= last_divider; i--) {
+            for (int i = first_divider; i >= last_divider; --i) {
                 if (num % i == 0) {
                     ans[0] = num;
                     ans[1] = i;
@@ -112,7 +112,7 @@ int main()
     cout << "Second multiplier : " << ans2[2] << endl;
 
     cout << "\nHow many digit that you want as the factor of the\n"
-         << "palindrome?\t";
+         << "palindrome?\n";
     int new_digit; cin >> new_digit;
 
     ans = palindrome_generator(new_digit);

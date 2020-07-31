@@ -53,13 +53,14 @@ unsigned long int compute(int limit)
 
 int main()
 {
+    int limit = 20;
     cout << "The smallest positive number that is evenly divisible "
          << "by all of\nthe numbers from 1 to 20." << endl;
-    cout << compute(20) << endl;
+    cout << compute(limit) << endl;
 
-    cout << "\nGive me the new integer for the new limit other than 20.\t";
-    int new_limit; cin >> new_limit;
-    cout << compute(new_limit) << endl;
+    cout << "\nGive me the new integer for the new limit other than 20.\n";
+    cin >> limit;
+    cout << compute(limit) << endl;
 
     return 0;
 }
