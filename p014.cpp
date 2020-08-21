@@ -29,7 +29,7 @@ int compute(int limit)
         }
  
         // Memoization
-        Array[i-1] = chain; // because we store chain of i=1 at index = 0, and so on
+        Array[i-1] = chain; // because we store chain of i = 1 at index = 0, and so on
 
         // storing things
         if (chain > longest_chain) {

@@ -23,7 +23,7 @@ int compute()
     cout << "c: " << c << endl;
     */
 
-    return a*b*c;
+    return (a*b*c);
 }
 
 int main()

@@ -15,7 +15,7 @@ int Eratosthenes_Sieve(int limit, unsigned long int size)
     for (int i = 1; i < size; ++i) {
         if (Array[i] != 0) {
             for (int j = 2*Array[i]; j <= size; j += Array[i])
-                Array[j-1] = 0;
+                Array[j - 1] = 0;
         }
     }
 
