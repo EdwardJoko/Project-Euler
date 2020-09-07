@@ -21,7 +21,8 @@ int palindrome_checker(string num_str)
 
     int identifier = 0;
     for (int i = 0; i < size/2; ++i) {
-        if (num_str[i] == num_str[size-1-i]) identifier += 1;
+        if (num_str[i] == num_str[size-1-i])
+            identifier += 1;
     }
 
     if (identifier == size/2) return 1;

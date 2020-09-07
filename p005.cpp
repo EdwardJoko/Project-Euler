@@ -12,7 +12,7 @@ unsigned long int compute(int limit)
 
     // Eliminating factors that have multipliers within the limit
     for (int i = 0; i < limit; ++i) {
-        for (int j = i + 1; j < limit; j++) {
+        for (int j = i + 1; j < limit; ++j) {
             if (Arr[j] % Arr[i] == 0) {
                 Arr[i] = 0;
                 break;

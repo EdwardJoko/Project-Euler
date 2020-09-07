@@ -25,7 +25,7 @@ vector<unsigned int> prime_generator(int limit)
     static vector<unsigned int> primes;
     primes.clear();
 
-    // input the primes to the new array
+    // input the primes to the vector
     for (int i = 0; i < limit; ++i) {
         if (Array[i] != 0)
             primes.push_back(Array[i]);
@@ -46,7 +46,7 @@ unsigned long int compute(int divisors)
     unsigned long int num_th_plus_one = 0;
     unsigned long int triangle_number = 0;
     unsigned long int iterate = 1;
-    
+
     while (factor < divisors) {
         factor = 1;
         factors.clear();
@@ -63,14 +63,16 @@ unsigned long int compute(int divisors)
 
         triangle_number = num_th * num_th_plus_one;
 
+        /*
         cout << "1: " << num_th << endl;
         cout << "2: " << num_th_plus_one << endl;
         cout << "3: " << triangle_number << endl;
+        */
 
         // counting the factor
         int index = 0;
         while (num_th != 1) {
-            if (num_th % primes_list[index] == 0) 
+            if (num_th % primes_list[index] == 0)
                 factors.push_back(1);
             while (num_th % primes_list[index] == 0) {
                 factors[factors.size() - 1] += 1;
@@ -78,9 +80,9 @@ unsigned long int compute(int divisors)
             }
             index += 1;
         }
-        
+
         for (int i = 0; i < factors.size(); ++i) factor *= factors[i];
-        
+
         factors.clear();
         index = 0;
 
@@ -96,7 +98,7 @@ unsigned long int compute(int divisors)
 
         for (int i = 0; i < factors.size(); ++i) factor *= factors[i];
 
-        cout << "factor: " << factor << endl;
+        // cout << "factor: " << factor << endl;
     }
 
     return triangle_number;
@@ -111,20 +113,14 @@ int main()
     cout << compute(500) << endl;
 
     double seconds_passed = difftime(time(0), start);
-
-    
     cout << seconds_passed << "seconds" << endl;
 
-    /*
     cout << "\nThe least amount of divisors that you want a "
          << "triangle number to have." << endl;
     int new_divisors; cin >> new_divisors;
 
-    cout << "The triangle number: " << compute(new_divisors) 
+    cout << "The triangle number: " << compute(new_divisors)
          << endl;
-    */
 
     return 0;
 }
-
-

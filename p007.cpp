@@ -1,6 +1,9 @@
 // Project Euler
 // Problem 7: The 10001st prime nubmer
 
+// I think it would be better if I use vector rather than array
+// but at the time I don't understand about vector yet
+
 #include <iostream>
 using namespace std;
 

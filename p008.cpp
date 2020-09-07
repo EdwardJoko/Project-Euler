@@ -29,8 +29,8 @@ unsigned long int compute(string series, int adjacent)
             index = i + j;
             product *= Array[index];
         }
-        if (product > biggest_product)
-            biggest_product = product;
+        
+        if (product > biggest_product) biggest_product = product;
 
         product = 1;
     }

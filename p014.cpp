@@ -12,8 +12,8 @@ int compute(int limit)
     int longest_chain = 0;
     int Array[limit];
 
-    for (unsigned int i = num; i < limit; ++i) {
-        j = i;  // i keep as index, j as the iterator of Collatz sequence
+    for (auto i = num; i < limit; ++i) {
+        j = i;      // i keep as index, j as the iterator of Collatz sequence
         chain = 1;  // reset the number of chain
 
         // Collatz sequence counter
@@ -21,13 +21,13 @@ int compute(int limit)
             if (j < i) {    // Memoization
                 chain += Array[j-1];
                 break;
-            } 
+            }
             else if (j % 2 == 0) j /= 2;
             else j = 3*j + 1;
 
             chain += 1;
         }
- 
+
         // Memoization
         Array[i-1] = chain; // because we store chain of i = 1 at index = 0, and so on
 
@@ -59,4 +59,3 @@ int compute(int limit)
 
      return 0;
 }
-
