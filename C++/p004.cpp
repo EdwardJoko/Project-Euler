@@ -1,6 +1,6 @@
 // Project Euler
 // Problem 4: The largest palindrome made from the product of two
-//            3-digit numbers
+//            3 digit numbers
 
 // My algorithm (the first one) is faster than the brute force
 // approach (the second one). But, I don't know if I optimized
@@ -23,6 +23,7 @@ int palindrome_checker(string num_str)
     for (int i = 0; i < size/2; ++i) {
         if (num_str[i] == num_str[size-1-i])
             identifier += 1;
+        else return 0;
     }
 
     if (identifier == size/2) return 1;

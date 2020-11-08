@@ -11,10 +11,10 @@ using namespace std;
 // left just the biggest two factors of the 'num'
 unsigned long int compute(unsigned long long int num)
 {
-    unsigned long int i = 2;
+    unsigned long int i = 2;    // i for iterator
     auto factor = i;
 
-    while (factor * factor <= num) {    // because if factor^2 is bigger than num. then factor*(factor+1) will also be bigger
+    while (i * i <= num) {    // because if i^2 is bigger than num. then factor*(factor+1) will also be bigger
         if (num % i != 0) {
             i += 1;
             continue;
