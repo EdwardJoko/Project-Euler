@@ -68,3 +68,4 @@ int main()
 
 // We can't operate a number with zero if the operator is %.
 // It will causing: Floating point exception (core dumped)
+
