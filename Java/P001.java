@@ -11,6 +11,7 @@ public class P001 {
     public static String compute(int limit) {
         int num = 1;
         int sum = 0;
+
         while (num < 1000) {
             if (num % 3 == 0 || num % 5 == 0)
                 sum += num;

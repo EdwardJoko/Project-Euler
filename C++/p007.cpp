@@ -32,7 +32,7 @@ int Eratosthenes_Sieve(int limit, unsigned long int size)
     }
 
     if (prime_th == limit) {
-        cout << Array[index] << endl;;
+        cout << Array[index] << endl;
         return 1;
     }
     else return 0;  // there no n-th prime that we looking for

@@ -9,20 +9,18 @@ public class P004 {
         int digit = 3;
         long[] answer = palindrome_generator(digit);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++)
             System.out.println(answer[i]);
-        }
 
         digit = 2;
         answer = palindrome_generator(digit);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++)
             System.out.println(answer[i]);
-        }
     }
 
     public static long[] palindrome_generator(int digit) {
-        long[] ans = {0, 0, 0};
+        long[] answer = {0, 0, 0};
         long num_factor = 0;
 
         for (int i = 0; i < digit; i++) {
@@ -38,19 +36,21 @@ public class P004 {
             if (palindrome_checker(num)) {
                 for (long i = first_divider; i >= last_divider; i--) {
                     if (num % i == 0) {
-                        ans[0] = num;
-                        ans[1] = i;
-                        ans[2] = num / i;
+                        answer[0] = num;
+                        answer[1] = i;
+                        answer[2] = num / i;
                         break;
                     }
                 }
             }
+
             // double checking
-            if (ans[2] < first_divider && ans[2] > last_divider)
+            if (answer[2] < first_divider && answer[2] > last_divider)
                 break;
             num -= 1;
         }
-        return ans;
+        
+        return answer;
     }
 
     public static boolean palindrome_checker(long num) {
@@ -63,6 +63,7 @@ public class P004 {
                 return false;
             i += 1;
         }
+
         return true;
     }
 }

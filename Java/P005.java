@@ -9,16 +9,17 @@ public class P005 {
         System.out.println(compute(20));
     }
 
-    public static long compute(int limit) {
-        int[] Arr = new int[limit];
+    public static String compute(int limit) {
+        int[] array = new int[limit];
+
         for (int i = 0; i < limit; i++)
-            Arr[i] = i + 1;
+            array[i] = i + 1;
 
         // Eliminating factor that have multipliers within the limit
         for (int i = 0; i < limit; i++) {
             for (int j = i + 1; j < limit; j++)
-                if (Arr[j] % Arr[i] == 0) {
-                    Arr[i] = 0;
+                if (array[j] % array[i] == 0) {
+                    array[i] = 0;
                     break;
                 }
         }
@@ -27,8 +28,8 @@ public class P005 {
 
         // Multiplying non-zero numbers in the array
         for (int i = 0; i < limit; i++) {
-            if (Arr[i] != 0)
-                num *= Arr[i];
+            if (array[i] != 0)
+                num *= array[i];
         }
 
         // Brute force. Remove all the extra unnecessary factors
@@ -37,6 +38,7 @@ public class P005 {
                 int identifier = 0;
                 long num_test = num / i;
                 int j = 2;
+
                 while (j <= limit) {
                     if (num_test % j == 0) {
                         identifier += 1;
@@ -44,12 +46,13 @@ public class P005 {
                     }
                     else break;
                 }
-                if (identifier == (limit-1)) {
+
+                if (identifier == (limit-1))
                     num = num_test;
-                }
                 else break;
             }
         }
-        return num;
+
+        return Long.toString(num);
     }
 }

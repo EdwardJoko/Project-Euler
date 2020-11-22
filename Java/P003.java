@@ -17,13 +17,15 @@ public class P003 {
                 i += 1;
                 continue;
             }
-            while (limit % i == 0) {
+            
+            while (limit % i == 0)
                 limit /= i;
-            }
+
             factor = i;
         }
 
-        if (factor > limit) return Long.toString(factor);
-        else return Long.toString(limit);
+        if (factor > limit)
+            return Long.toString(factor);
+        return Long.toString(limit);
     }
 }

@@ -1,7 +1,7 @@
-import java.math.BigInteger;
-
 // Project Euler
 // Problem 16: The sum of the digits of the number 2 powered by 1000
+
+import java.math.BigInteger;
 
 public class P016 {
     public static void main(String[] args) {
@@ -22,10 +22,5 @@ public class P016 {
         }
 
         return Integer.toString(sum);
-    }
-
-    // another method that in case straightforward way is not working or too long
-    public static String compute_complex(int limit) {
-
     }
 }

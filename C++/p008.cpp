@@ -1,5 +1,5 @@
 // Project Euler
-// Problem 8: Biggest product of 13 adjacent digits int the series
+// Problem 8: Biggest product of 13 adjacent digits in the series
 
 #include <iostream>
 #include <string>
