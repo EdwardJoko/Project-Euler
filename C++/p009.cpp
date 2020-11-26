@@ -1,5 +1,5 @@
 // Project Euler
-// Problem 9: a, b, c are a Pythagorean triplet. If a + b + c = 1000
+// Problem 9: a, b, c, are a Pythagorean triplet. If a + b + c = 1000
 //            Find the product of abc.
 
 #include <iostream>
@@ -12,9 +12,10 @@ int compute()
         for (b = 1; b <= (1000-a)/2; ++b) {
             c = 1000 - a - b;
 
-            if ((a*a) == ((b*b)+(c*c))) break;
+            if ((a*a) == ((b*b) + (c*c))) break;
         }
-        if ((a*a) == ((b*b)+(c*c))) break;
+
+        if ((a*a) == ((b*b) + (c*c))) break;
     }
 
     /*

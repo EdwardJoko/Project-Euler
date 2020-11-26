@@ -6,42 +6,44 @@ public class P023 {
     public static void main(String[] args) {
         int limit = 28123;
 
-        long start = System.currentTimeMillis();
+        // long start = System.currentTimeMillis();
+
         System.out.println(compute(limit));
-        long finish = System.currentTimeMillis();
-        System.out.println((finish - start) + " second");
+
+        // long finish = System.currentTimeMillis();
+        // System.out.println((finish - start) + " second");
     }
-    
+
     public static String compute(int limit) {
         int sum = 0;
-        int[] all_nums = new int[limit];    // all numbers
-        int[] sieve_array = new int[limit]; // prime numbers
+        int[] all_num = new int[limit];    // all numbers
+        int[] prime_num = new int[limit];  // prime numbers
         int[] temp_abundant_num = new int[limit];   // abundant numbers
 
         // filling the array
         for (int i = 0; i < limit; i++) {
-            all_nums[i] = i + 1;
-            sieve_array[i] = i + 1;
+            all_num[i] = i + 1;
+            prime_num[i] = i + 1;
             temp_abundant_num[i] = 0;
         }
 
         // Eratosthenes' sieve
         // because prime numbers are not abundant number
-        sieve_array[0] = 0;
+        prime_num[0] = 0;
         for (int i = 0; i < limit; i++) {
-            if (sieve_array[i] != 0) {
-                for (int j = 2*sieve_array[i]; j < limit; j += sieve_array[i])
-                    sieve_array[j - 1] = 0;
+            if (prime_num[i] != 0) {
+                for (int j = 2*prime_num[i]; j < limit; j += prime_num[i])
+                    prime_num[j - 1] = 0;
             }
         }
 
         // second sieve, list all the abundant numbers below 1000,
-        // it's because the double of an abundant number is also
-        // an abundant number
+        // because the double of an abundant number is also an abundant
+        // number
         for (int i = 0; i < 1000; i++) {
             int sum_of_factors = 0;
-            int num = all_nums[i];
-            if (sieve_array[i] == 0) { //only checknon-prime number
+            int num = all_num[i];
+            if (prime_num[i] == 0) { // only checknon-prime number
                 if (num % 2 == 0) {
                     for (int j = 1; j < num/2; j++) {
                         if (num % j == 0) sum_of_factors += j;
@@ -58,7 +60,7 @@ public class P023 {
             }
         }
 
-        // list all the double of abundant numbers that we just listed
+        // list all the double of abundant numbers that we just listed above
         for (int i = 0; i < 1000; i++) {
             if (temp_abundant_num[i] != 0) {
                 for (int j = temp_abundant_num[i]; j < limit; j *= 2)
@@ -68,11 +70,11 @@ public class P023 {
 
         // last step: brute force to list all abundant numbers
         for (int i = 0; i < limit; i++) {
-            int primeNum = sieve_array[i];
+            int primeNum = prime_num[i];
             int abundantNum = temp_abundant_num[i];
-            int num = all_nums[i];
+            int num = all_num[i];
             int sum_of_factors = 0;
-            if (primeNum == 0 && abundantNum == 0) {
+            if (primeNum == 0 && abundantNum == 0) { // only check non-prime numbers and abundant number that is not yet listed
                 if (num % 2 == 0) {
                     for (int j = 1; j < num/2; j++) {
                         if (num % j == 0) sum_of_factors += j;
@@ -107,17 +109,20 @@ public class P023 {
 
         index = 0;
         for (int i = 0; i < non_zero; i++) {
-            for (int j = i; all_abund_num[i] + all_abund_num[j] - 1 < limit; j++) {
+            for (int j = i; all_abund_num[i] + all_abund_num[j] - 1 < limit; j++) { // -1 because index start from 0
                 index = all_abund_num[i] + all_abund_num[j] - 1;
-                all_nums[index] = 0;
+                all_num[index] = 0;
             }
         }
 
         for (int i = 0; i < limit; i++) {
-            if (all_nums[i] != 0)
-                sum += all_nums[i];
+            if (all_num[i] != 0)
+                sum += all_num[i];
         }
-        
+
         return Integer.toString(sum);
     }
 }
+
+// Nayuki has better and faster solution in his github
+

@@ -8,6 +8,8 @@ public class P003 {
         System.out.println(compute(limit));
     }
 
+    // we divide the number with every factor it has from 2,
+    // then it will leave two biggest factors that the number has
     public static String compute(long limit) {
         long i = 2L;
         long factor = i;
@@ -29,3 +31,4 @@ public class P003 {
         return Long.toString(limit);
     }
 }
+
