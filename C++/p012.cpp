@@ -1,5 +1,5 @@
 // Project Euler
-// Problem 12: The first triangle number that have 500 divisors
+// Problem 12: The first triangle number that has 500 divisors
 
 #include <iostream>
 #include <vector>
@@ -56,8 +56,7 @@ unsigned long int compute(int divisors)
         if (num_th % 2 == 0) {
             num_th_plus_one = num_th + 1;
             num_th /= 2;
-        }
-        else {
+        } else {
             num_th_plus_one = (num_th + 1) / 2;
         }
 
