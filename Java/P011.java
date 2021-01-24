@@ -43,12 +43,12 @@ public class P011 {
         int horizontal_product = 1;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j <= array[i].length - 4; j++) {
-                for (int k = j; k <= j + 3; k++) {
+                for (int k = j; k <= j + 3; k++)
                     temp_product *= array[i][k];
-                }
-                if (temp_product > horizontal_product) {
+
+                if (temp_product > horizontal_product)
                     horizontal_product = temp_product;
-                }
+
                 temp_product = 1;
             }
         }
@@ -58,12 +58,12 @@ public class P011 {
         temp_product = 1;
         for (int i = 0; i < array[0].length; i++) {
             for (int j = 0; j <= array.length - 4; j++) {
-                for (int k = j; k <= j + 3; k++) {
+                for (int k = j; k <= j + 3; k++)
                     temp_product *= array[k][i];
-                }
-                if (temp_product > vertical_product) {
+
+                if (temp_product > vertical_product)
                     vertical_product = temp_product;
-                }
+
                 temp_product = 1;
             }
         }
@@ -73,12 +73,12 @@ public class P011 {
         temp_product = 1;
         for (int i = 0; i <= array.length - 4; i++) {
             for (int j = 0; j <= array[0].length - 4; j++) {
-                for (int k = 0; k <= 3; k++) {
+                for (int k = 0; k <= 3; k++)
                     temp_product *= array[i + k][j + k];
-                }
-                if (temp_product > diagonal_down_right) {
+
+                if (temp_product > diagonal_down_right)
                     diagonal_down_right = temp_product;
-                }
+
                 temp_product = 1;
             }
         }
@@ -88,12 +88,12 @@ public class P011 {
         temp_product = 1;
         for (int i = array.length - 1; i >= 3; i--) {
             for (int j = 0; j <= array[0].length - 4; j++) {
-                for (int k = 0; k <= 3; k++) {
+                for (int k = 0; k <= 3; k++)
                     temp_product *= array[i - k][j + k];
-                }
-                if (temp_product > diagonal_up_right) {
+
+                if (temp_product > diagonal_up_right)
                     diagonal_up_right = temp_product;
-                }
+
                 temp_product = 1;
             }
         }

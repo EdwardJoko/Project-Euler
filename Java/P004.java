@@ -23,9 +23,8 @@ public class P004 {
         long[] answer = {0, 0, 0};
         long num_factor = 0;
 
-        for (int i = 0; i < digit; i++) {
+        for (int i = 0; i < digit; i++)
             num_factor += 9 * Math.pow(10, i);
-        }
 
         long num = num_factor * num_factor;
         long first_divider = num_factor;
@@ -44,7 +43,7 @@ public class P004 {
                 }
             }
 
-            // double checking
+            // double check
             if (answer[2] < first_divider && answer[2] > last_divider)
                 break;
             num -= 1;

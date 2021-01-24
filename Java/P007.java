@@ -16,9 +16,8 @@ public class P007 {
         array[0] = 0;
 
         // filling the array
-        for (int i = 1; i < range; i++) {
+        for (int i = 1; i < range; i++)
             array[i] = i + 1;
-        }
 
         // the sieve
         for (int i = 1; i < range; i++) {
@@ -33,13 +32,12 @@ public class P007 {
         int index;
         for (index = 0; index < range; index++) {
             if (array[index] != 0) prime_th += 1;
-            if (prime_th == n_th) break;
+            if (prime_th == n_th) {
+                System.out.println(array[index]);
+                return true;
+            }
         }
 
-        if (prime_th == n_th) {
-            System.out.println(array[index]);
-            return true;
-        }
         return false;
     }
 }

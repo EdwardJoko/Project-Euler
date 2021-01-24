@@ -18,6 +18,5 @@ public class P009 {
                     return Integer.toString(a*b*c);
             }
         }
-        return Integer.toString(a*b*c);
     }
 }

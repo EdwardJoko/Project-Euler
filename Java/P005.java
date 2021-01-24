@@ -15,7 +15,7 @@ public class P005 {
         for (int i = 0; i < limit; i++)
             array[i] = i + 1;
 
-        // Eliminating factor that have multipliers within the limit
+        // Eliminate factors that have multipliers within the limit
         for (int i = 0; i < limit; i++) {
             for (int j = i + 1; j < limit; j++)
                 if (array[j] % array[i] == 0) {
@@ -33,7 +33,7 @@ public class P005 {
         }
 
         // Brute force. Remove all the extra unnecessary factors
-        for (int i = 2; i <= limit; ++i) {
+        for (int i = 2; i <= limit; i++) {
             while (num % i == 0) {
                 int identifier = 0;
                 long num_test = num / i;

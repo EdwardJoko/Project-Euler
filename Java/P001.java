@@ -21,4 +21,3 @@ public class P001 {
         return Integer.toString(sum);
     }
 }
-

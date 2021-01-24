@@ -31,4 +31,3 @@ public class P003 {
         return Long.toString(limit);
     }
 }
-

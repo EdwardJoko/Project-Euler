@@ -125,4 +125,3 @@ public class P023 {
 }
 
 // Nayuki has better and faster solution in his github
-
