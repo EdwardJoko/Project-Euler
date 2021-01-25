@@ -1,6 +1,6 @@
 // Project Euler
-// Problem 19: How many Sundays fell on the first of the month
-//             during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
+// Problem 19: How many Sundays fell on the first of the month during
+//             the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 
 public class P019 {
     public static void main(String[] args) {
@@ -25,6 +25,10 @@ public class P019 {
                 day_index = day_index >= 7 ? day_index % 7 : day_index;
 
                 if (days[day_index] == "Sun") sundays += 1;
+                /*
+                 * More compact version,
+                 * if (day_index == 6) sundays += 1;
+                 */
             }
         }
         return Integer.toString(sundays);
