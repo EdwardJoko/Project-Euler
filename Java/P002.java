@@ -24,5 +24,4 @@ public class P002 {
 
         return Integer.toString(sum);
     }
-
 }

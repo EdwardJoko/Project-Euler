@@ -16,7 +16,6 @@ public class P010 {
             array[i] = i + 1;
 
         array[0] = 0;
-
         // Eratosthenes' Sieve
         for (int i = 1; i < limit; i++) {
             if (array[i] != 0) {

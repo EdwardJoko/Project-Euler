@@ -12,7 +12,8 @@ vector<unsigned int> prime_generator(int limit)
 
     // filling the array
     Array[0] = 0;
-    for (int i = 1; i < limit; ++i) Array[i] = i + 1;
+    for (int i = 1; i < limit; ++i)
+        Array[i] = i + 1;
 
     // Eratosthenes' Sieve
     for (int i = 1; i < limit; ++i) {
@@ -80,7 +81,8 @@ unsigned long int compute(int divisors)
             index += 1;
         }
 
-        for (int i = 0; i < factors.size(); ++i) factor *= factors[i];
+        for (int i = 0; i < factors.size(); ++i)
+            factor *= factors[i];
 
         factors.clear();
         index = 0;
@@ -95,7 +97,8 @@ unsigned long int compute(int divisors)
             index += 1;
         }
 
-        for (int i = 0; i < factors.size(); ++i) factor *= factors[i];
+        for (int i = 0; i < factors.size(); ++i)
+            factor *= factors[i];
 
         // cout << "factor: " << factor << endl;
     }
