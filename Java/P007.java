@@ -6,8 +6,10 @@ public class P007 {
         int n_th = 10001;
         int range = n_th * 1000;    // assumming if the n_th prime is within the range of n_th * 1000
 
-        while (!eratosthenes_sieve(n_th, range))
-            range *= 1000;  // increase the range in case we don't get the n_th prime
+        while (!eratosthenes_sieve(n_th, range)) {
+            // increase the range in case we don't get the n_th prime
+            range *= 1000;
+        }
     }
 
     public static boolean eratosthenes_sieve(int n_th, int range) {

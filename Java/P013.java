@@ -10,10 +10,10 @@ public class P013 {
     }
 
     public static String compute(String[] numbers) {
-        int arrayLength = numbers.length;
+        int array_length = numbers.length;
         BigInteger num = new BigInteger("0");
 
-        for (int i = 0; i < arrayLength; i++)
+        for (int i = 0; i < array_length; i++)
             num = num.add(new BigInteger(numbers[i]));
 
         return num.toString().substring(0, 10);

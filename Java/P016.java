@@ -11,8 +11,8 @@ public class P016 {
         while (power <= 1000) {
             int answ1 = compute(power);
             int answ2 = alternate_compute(power);
-            System.out.println("1: " + answ1);
-            System.out.println("2: " + answ2);
+            System.out.println("method 1: " + answ1);
+            System.out.println("method 2: " + answ2);
             power += 1;
 
             if (answ1 != answ2)

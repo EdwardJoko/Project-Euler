@@ -16,7 +16,8 @@ public class P008 {
         int series_length = series.length();
         
         // declaring and filling the array
-        int[] array = new int[series_length]; char a;
+        char a;
+        int[] array = new int[series_length];
         for (int i = 0; i < series_length; i++) {
             a = series.charAt(i);
             array[i] = (int)a - 48;

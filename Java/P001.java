@@ -12,9 +12,10 @@ public class P001 {
         int num = 1;
         int sum = 0;
 
-        while (num < 1000) {
+        while (num < limit) {
             if (num % 3 == 0 || num % 5 == 0)
                 sum += num;
+
             num += 1;
         }
         

@@ -31,7 +31,8 @@ public class P012 {
             if (num_th % 2 == 0) {
                 num_th_plus_one = num_th + 1;
                 num_th /= 2;
-            } else {
+            }
+            else {
                 num_th_plus_one = (num_th + 1) /2;
             }
 
