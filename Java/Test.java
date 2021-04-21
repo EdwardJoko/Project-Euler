@@ -1,13 +1,10 @@
-import java.util.*;
-
 public class Test {
     public static void main(String[] args) {
         int[] array = {0};
+        int[] new_array;
 
-        long index_long = 0;
-        int index_integer = 0;
+        new_array = array;
 
-        System.out.println(array[index_long]);
-        System.out.println(array[index_integer]);
+        System.out.println(new_array[0]);
     }
 }

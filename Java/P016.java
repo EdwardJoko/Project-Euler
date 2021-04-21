@@ -50,6 +50,7 @@ public class P016 {
                 if (array[k] >= 10) more_than_ten += 1;
             }
 
+            // multiply all the numbers in array by 2
             if (more_than_ten == 0) {
                 for (int j = 0; j < non_zero; j++) {
                     array[j] *= 2;
@@ -62,7 +63,15 @@ public class P016 {
                             non_zero += 1;
                     }
                 }
-            } else {
+            }
+            // in case there is any number that is more than 10 in
+            // the array we substract it by 10, n times until it
+            // less than 10, then we add n to the next element of 
+            // the array.
+            // So we will have an array of numbers that is the e-
+            // lements are forming the result of 2 powered by the
+            // limit
+            else {
                 for (int z = 0; z < array.length; z++) {
                     while (array[z] >= 10) {
                         array[z] -= 10;
