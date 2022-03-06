@@ -1,5 +1,5 @@
 // Project Euler
-// Problem 2: The sum of Fibonacci number under 4000000
+// Problem 2: The sum of even Fibonacci number under 4000000
 
 public class P002 {
     public static void main(String[] args) {
