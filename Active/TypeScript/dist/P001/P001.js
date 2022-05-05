@@ -17,4 +17,4 @@ function run001() {
     const limit = 1000;
     console.log(compute001(limit).toString());
 }
-run001();
+// run001();

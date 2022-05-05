@@ -18,4 +18,4 @@ function run001(): void {
     console.log(compute001(limit).toString());
 }
 
-run001();
+// run001();

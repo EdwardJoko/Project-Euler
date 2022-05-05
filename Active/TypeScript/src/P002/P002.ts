@@ -26,4 +26,4 @@ function run002(): void {
     console.log(compute002(limit).toString());
 }
 
-run002();
+// run002();

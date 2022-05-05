@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "build": "tsc -p .",
-    "test": "jest --testPathPattern=dist",
+    "test": "jest -runInBand --testPathPattern=dist",
     "compile": "npm-run-all clean build test"
   },
   "keywords": [],

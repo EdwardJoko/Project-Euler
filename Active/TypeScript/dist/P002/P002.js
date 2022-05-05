@@ -23,4 +23,4 @@ function run002() {
     const limit = 4000000;
     console.log(compute002(limit).toString());
 }
-run002();
+// run002();
