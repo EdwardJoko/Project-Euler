@@ -1,8 +1,9 @@
 // Project Euler
 // Problem 3: The largest prime factor of 600851475143
 
-// we divide the argument with every factor it has starting with 2,
-// then it will leaves two biggest factors that the number has
+// we divide (or limit) the argument with every factor it has star-
+// ting with 2, then it will leaves two biggest factors that the
+// number has
 export function compute003(limit: number): number {
     let i: number = 2;
     let factor: number = i;
