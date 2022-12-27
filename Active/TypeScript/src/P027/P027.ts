@@ -5,7 +5,7 @@
 // consecutive values of n, starting with n = 0.
 
 import primeGenerator from "../lib/eratosthenesSieve";
-import isPrime from "../lib/primeChecker";
+import isPrime from "../lib/isPrime";
 
 interface AnswerInterface {
     a: number;

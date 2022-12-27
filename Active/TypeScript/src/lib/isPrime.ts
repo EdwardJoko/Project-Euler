@@ -1,5 +1,5 @@
-function primeChecker(num: number): boolean {
-    if (num === 1 || num <= 0) {
+function isPrime(num: number): boolean {
+    if (num <= 1) {
         return false;
     }
 
@@ -12,4 +12,4 @@ function primeChecker(num: number): boolean {
     return true;
 }
 
-export default primeChecker;
+export default isPrime;
