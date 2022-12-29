@@ -21,10 +21,7 @@ export function compute003(limit: number): number {
         factor = i;
     }
 
-    if (factor > limit) {
-        return factor;
-    }
-    return limit;
+    return factor > limit ? factor : limit;
 }
 
 function run003(): void {

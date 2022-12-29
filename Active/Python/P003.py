@@ -7,16 +7,14 @@ def compute(limit: int) -> str:
 
     # i as iterator variable
     i: int = 2
-    while limit > (i ** 2):
-        # if limit is divisible by i, then keep divide with it
+    while limit > (i * i):
+        # if limit is divisible by 'i', then keep divide 'limit' with it
         while limit % i == 0:
             limit //= i
 
         i += 1
 
-    if (limit > i):
-        return str(limit)
-    return str(i)
+    return str(limit) if (limit > i) else str(i)
 
 if __name__ ==  "__main__":
     limit: int = 600851475143
