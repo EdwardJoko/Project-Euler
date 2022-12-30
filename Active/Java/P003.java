@@ -1,16 +1,15 @@
 // Project Euler
 // Problem 3: The largest prime factor of 600851475143
 
-public class P003 {
+public class P003 implements Solution<Long> {
     public static void main(String[] args) {
         long limit = 600_851_475_143L;
-
-        System.out.println(compute(limit));
+        System.out.println(new P003().compute(limit));
     }
 
     // we divide the number with every factor it has from 2,
     // then it will leave two biggest factors that the number has
-    public static String compute(long limit) {
+    public String compute(Long limit) {
         long i = 2L;
         long factor = i;
 
@@ -26,8 +25,7 @@ public class P003 {
             factor = i;
         }
 
-        if (factor > limit)
-            return Long.toString(factor);
-        return Long.toString(limit);
+        return factor > limit ?
+            Long.toString(factor) : Long.toString(limit);
     }
 }

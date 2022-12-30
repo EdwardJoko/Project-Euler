@@ -1,14 +1,13 @@
 // Project Euler
 // Problem 2: The sum of even Fibonacci number under 4000000
 
-public class P002 {
+public class P002 implements Solution<Integer> {
     public static void main(String[] args) {
         int limit = 4000_000;
-
-        System.out.println(compute(limit));
+        System.out.println(new P002().compute(limit));
     }
 
-    public static String compute(int limit) {
+    public String compute(Integer limit) {
         int x = 0;  // the first  number of Fibonacci
         int y = 1;  // the second number of Fibonacci
         int temp = 0;   // temporary variable to store value
