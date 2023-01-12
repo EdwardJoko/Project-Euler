@@ -2,20 +2,19 @@
 // Problem 5: Smallest positive number that is evenly divisible
 //            by all of the numbers from 1 to 20
 
-public class P005 {
+public class P005 implements Solution<Integer> {
     public static void main(String[] args) {
         int limit = 20;
-
-        System.out.println(compute(20));
+        System.out.println(new P005().compute(limit));
     }
 
-    public static String compute(int limit) {
+    public String compute(Integer limit) {
         int[] array = new int[limit];
 
         for (int i = 0; i < limit; i++)
             array[i] = i + 1;
 
-        // Eliminate factors that have multipliers within the limit
+        // Eliminate factors that have multipliers above itself and within the limit
         for (int i = 0; i < limit; i++) {
             for (int j = i + 1; j < limit; j++)
                 if (array[j] % array[i] == 0) {
@@ -28,12 +27,12 @@ public class P005 {
 
         // Multiplying non-zero numbers in the array
         for (int i = 0; i < limit; i++) {
-            if (array[i] != 0)
-                num *= array[i];
+            if (array[i] != 0) num *= array[i];
         }
 
         // Brute force. Remove all the extra unnecessary factors
         for (int i = 2; i <= limit; i++) {
+            // the loop is because in case num is divisible by i multiple times
             while (num % i == 0) {
                 int identifier = 0;
                 long num_test = num / i;
