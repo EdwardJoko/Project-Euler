@@ -3,17 +3,27 @@
 //            first one hundred natural limitbers and the square of
 //            the sum
 
-public class P006 {
-  public static void main(String[] args) {
-      int limit = 100;
+public class P006 implements Solution<Integer> {
+    public static void main(String[] args) {
+        int limit = 100;
+        System.out.println(new P006().compute(limit));
+    }
 
-      System.out.println(compute(limit));
-  }
+    public String compute(Integer limit) {
+        // sum of squares
+        int sum_of_squares = 0;
 
-  public static String compute(int limit) {
-      int sum_of_squares = (limit * (limit+1) * (2*limit+1)) / 6;
-      int square_of_sum  = ((limit * (limit+1)) / 2) * ((limit * (limit+1)) / 2);
+        for (let i = 1; i <= limit; i++)
+            sum_of_squares += (i * i);
 
-      return Integer.toString(square_of_sum - sum_of_squares);
-  }
+        // square of sum
+        int sum_of_n_integer = 0;
+
+        for (let i = 1; i <= limit; i++)
+            sum_of_n_integer += i;
+
+        int square_of_sum = sum_of_n_integer * sum_of_n_integer;
+
+        return Integer.toString(square_of_sum - sum_of_squares);
+    }
 }
