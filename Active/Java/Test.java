@@ -1,10 +1,16 @@
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args) {
-        int[] array = {0};
-        int[] new_array;
+        Lib lib = new Lib();
 
-        new_array = array;
-
-        System.out.println(new_array[0]);
+        System.out.println(Arrays.toString(lib.eratosthenes_sieve(2)));
+        System.out.println(Arrays.toString(lib.eratosthenes_sieve(3)));
+        System.out.println(Arrays.toString(lib.eratosthenes_sieve(5)));
+        System.out.println(Arrays.toString(lib.eratosthenes_sieve(7)));
+        System.out.println(Arrays.toString(lib.eratosthenes_sieve(9)));
+        System.out.println(Arrays.toString(lib.eratosthenes_sieve(11)));
+        System.out.println(Arrays.toString(lib.eratosthenes_sieve(13)));
+        System.out.println(Arrays.toString(lib.eratosthenes_sieve(15)));
     }
 }
