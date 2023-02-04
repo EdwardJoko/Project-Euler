@@ -2,21 +2,23 @@
 // Problem 9: a, b, c, are a Pythagorean triplet. If a + b + c = 100
 //            Find the product of abc
 
-public class P009 {
+public class P009 implements Solution<Integer> {
     public static void main(String[] args) {
-        System.out.println(compute());
+        int number = 1000;
+        System.out.println(new P009().compute(number));
     }
 
-    public static String compute() {
-        int a = 1, b = 1, c = 1;
+    public String compute(Integer number) {
+        // minus 2 because b, c first value are at least 1
+        for (int a = (number - 2); a > 1; a--) {
+            for (int b = 1; b <= (number - a)/2; b++) {
+                int c = number - a - b;
 
-        for (a = 998; a > 1; a--) {
-            for (b = 1; b <= (1000-a)/2; b++) {
-                c = 1000 - a - b;
-
-                if ((a*a) == ((b*b) + (c*c)))
+                if ((a*a) == (b*b) + (c*c))
                     return Integer.toString(a*b*c);
             }
         }
+
+        return "Not solution exist.";
     }
 }
