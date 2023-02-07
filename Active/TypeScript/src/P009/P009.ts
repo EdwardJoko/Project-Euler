@@ -1,5 +1,5 @@
 // Project Euler
-// Problem 9: a, b, c, are a Pythagorean triplet. If a + b + c = 100
+// Problem 9: a, b, c, are a Pythagorean triplet. If a + b + c = 1000
 //            Find the product of abc
 
 export function compute009(sum: number): number {

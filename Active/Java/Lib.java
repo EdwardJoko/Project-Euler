@@ -6,9 +6,8 @@ public class Lib {
             return empty;
         }
 
-        int[] nums = new int[limit + 1];
-
         // create an array with element from 0 to limit
+        int[] nums = new int[limit + 1];
         for (int i = 0; i <= limit; i++) 
             nums[i] = i;
 
@@ -17,25 +16,22 @@ public class Lib {
 
         // eliminate non-prime numbers from the array with Eratosthenes's
         // sieve
-        int nonZero = limit + 1;
+        int nonZero = limit + 1; // the amount of non-zero numbers in array
         for (int i = 0; i <= limit; i++) {
-            int divider = nums[i];
-
             // skip already eliminated numbers
-            if (divider == 0) {
+            if (nums[i] == 0) {
                 nonZero -= 1;
                 continue;
             }
 
-            for (int j = i * 2; j <= limit; j += i)
+            for (int j = nums[i] * 2; j <= limit; j += nums[i])
                 nums[j] = 0;
         }
 
         // create new element that just include non-zero number from the
         // nums array, or just only the primes
         int[] primes = new int[nonZero];
-        int j = 0;
-        for (int i = 0; i <= limit; i++) {
+        for (int i = 0, j = 0; i <= limit; i++) {
             if (nums[i] != 0) {
                 primes[j] = nums[i];
                 j += 1;

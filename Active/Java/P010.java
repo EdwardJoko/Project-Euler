@@ -1,30 +1,19 @@
 // Project Euler
 // Problem 10: The sum of all prime numbers below 2000000
 
-public class P010 {
+public class P010 implements Solution<Integer> {
     public static void main(String[] args) {
         int limit = 2000_000;
-
-        System.out.println(compute(limit));
+        System.out.println(new P010().compute(limit));
     }
 
-    public static String compute(int limit) {
+    public String compute(Integer limit) {
+        Lib lib = new Lib();
+        int[] array = lib.eratosthenes_sieve(limit);
+
         long sum = 0;
-        int[] array = new int[limit];
-
-        for (int i = 0; i < limit; i++)
-            array[i] = i + 1;
-
-        array[0] = 0;
-        // Eratosthenes' Sieve
-        for (int i = 1; i < limit; i++) {
-            if (array[i] != 0) {
-                for (int j = 2*array[i]; j <= limit; j += array[i])
-                    array[j - 1] = 0;
-            }
-        }
-
-        for (int i = 0; i < limit; i++)
+        int len = array.length;
+        for (int i = 0; i < len; i++)
             sum += array[i];
 
         return Long.toString(sum);
