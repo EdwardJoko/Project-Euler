@@ -1,0 +1,20 @@
+
+    6. Why in Eratosthenes' Sieve we only loop to i * i <= limit, where i is the
+       iterator?
+       It's because, look at the following series,
+
+           1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+
+       the loop only iterate to the point where i is equal to 4. How can we be
+       sure that all the non-prime number is eliminated from the list?
+
+       It's because if a number is less than 16, and the number is a composite
+       number, and one of its factor is bigger than 4, let's call this factor
+       a, then, the other factor would be less than 4, let's call this number b.
+       Then we can be sure that the composite number that is less than 16,
+       would be eliminated when the iterator is equal to b.
+
+       Otherwise, if a and b is bigger than 4, then, the composite number
+       would be bigger than 16. Because a > 4, and b > 4, so a * b > 4 * 4.
+       That exceed our limit.
+
