@@ -23,6 +23,7 @@ function maxNumGenerator(digit: number): number {
     return Number(maxNum);
 }
 
+// generate the minimum number of n digit. if digit is 3, than the maxNum is 100
 function minNumGenerator(digit: number): number {
     let minNum: string = "";
     for (let i = 0; i < (digit - 1); i++) minNum += "9";
