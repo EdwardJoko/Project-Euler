@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-int compute(int limit) {
+int compute002(int limit) {
     int x = 0;  // the first  number of Fibonacci
     int y = 1;  // the second number of Fibonacci
     int temp = 0;   // temporary variable to store value
@@ -18,11 +18,4 @@ int compute(int limit) {
     }
 
     return sum;
-}
-
-int main(int argc, char *argv[]) {
-    int limit = 4000000;
-    printf("%d\n", compute(limit));
-
-    return 0;
 }

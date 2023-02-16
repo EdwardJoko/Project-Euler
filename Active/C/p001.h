@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-int compute(int limit) {
+int compute001(int limit) {
     int num = 1;
     int sum = 0;
 
@@ -16,11 +16,4 @@ int compute(int limit) {
     }
 
     return sum;
-}
-
-int main(int argc, char *argv[]) {
-    int limit = 1000;
-    printf("%d\n", compute(limit));
-
-    return 0;
 }

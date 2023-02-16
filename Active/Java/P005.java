@@ -9,8 +9,8 @@ public class P005 implements Solution<Integer> {
     }
 
     public String compute(Integer limit) {
+        // init the array
         int[] array = new int[limit];
-
         for (int i = 0; i < limit; i++)
             array[i] = i + 1;
 

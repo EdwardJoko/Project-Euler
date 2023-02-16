@@ -37,7 +37,7 @@ unsigned long int min_num_generator(int digit) {
     return minNum;
 }
 
-int compute(int digit) {
+int compute004(int digit) {
     unsigned long int maxNum = max_num_generator(digit);
     unsigned long int maxProduct = maxNum * maxNum;
 
@@ -56,13 +56,4 @@ int compute(int digit) {
         maxProduct -= 1;
     }
     return -1;
-}
-
-int main(int argc, char *argv[]) {
-    int digit = 2;
-    printf("%d\n", compute(digit));
-    digit = 3;
-    printf("%d\n", compute(digit));
-
-    return 0;
 }

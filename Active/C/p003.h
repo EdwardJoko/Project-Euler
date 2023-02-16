@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-unsigned long int compute(unsigned long int limit) {
+unsigned long int compute003(unsigned long int limit) {
     unsigned long int i = 2;
     unsigned long int factor = i;
 
@@ -20,11 +20,4 @@ unsigned long int compute(unsigned long int limit) {
     }
 
     return factor > limit ? factor : limit;
-}
-
-int main(int argc, char *argv[]) {
-    unsigned long int limit = 600851475143;
-    printf("%d\n", compute(limit));
-
-    return 0;
 }
