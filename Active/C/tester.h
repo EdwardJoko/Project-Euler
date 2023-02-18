@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool test(char str[], unsigned long int result, unsigned long int answer) {
+void test(char str[], unsigned long int result, unsigned long int answer) {
     if (result ==  answer) {
         printf("Solution for problem %s is correct.\n", str);
     } else {

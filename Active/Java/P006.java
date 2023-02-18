@@ -1,6 +1,6 @@
 // Project Euler
 // Problem 6: The difference between the sum of the squares of the
-//            first one hundred natural limitbers and the square of
+//            first one hundred natural numbers and the square of
 //            the sum
 
 public class P006 implements Solution<Integer> {
