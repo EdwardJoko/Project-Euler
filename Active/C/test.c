@@ -9,6 +9,7 @@
 #include "p005.h"
 #include "p006.h"
 #include "p007.h"
+#include "p008.h"
 
 int main(int argc, char *argv[]) {
     test("001", compute001( 1000         ), 233168);
@@ -18,6 +19,7 @@ int main(int argc, char *argv[]) {
     test("005", compute005( 20           ), 232792560);
     test("006", compute006( 100          ), 25164150);
     test("007", compute007( 10001        ), 104743);
+    test("008", compute008( 13           ), 23514624000);
 
     return 0;
 }

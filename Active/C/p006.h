@@ -3,8 +3,6 @@
 //            first one hundred natural numbers and the square of
 //            the sum
 
-#include <stdio.h>
-
 unsigned long int compute006(int limit) {
     // sum of squares
     unsigned long int sum_of_squares = 0;

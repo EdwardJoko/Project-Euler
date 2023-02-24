@@ -2,7 +2,6 @@
 // Problem 4: The largest palindrom made from the product of
 //            3 digit numbers
 
-#include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
 #include <math.h> // README! add " -lm" when compiling this file

@@ -2,8 +2,6 @@
 // Problem 5: Smallest positive number that is evenly divisible
 //            by all of the numbers from 1 to 20
 
-#include <stdio.h>
-
 unsigned long int compute005(int limit) {
     // init the array
     int array[limit];

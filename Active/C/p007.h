@@ -1,7 +1,6 @@
 // Project Euler
 // Problem 7: The 10001st prime number
 
-#include <stdio.h>
 #include "lib.h"
 
 int compute007(int limit) {
