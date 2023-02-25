@@ -9,46 +9,28 @@ bool is_prime(unsigned long int number) {
     return true;
 }
 
-// return an array of primes under the (limit+1)
-/*
-int* eratosthenes_sieve(int limit) {
-    if (limit <= 1) {
-        static int empty[] = [];
-        return empty;
-    }
+// return an array with element from 0 to limit but replacing non-prime number as 0
+void eratosthenes_sieve(unsigned long int limit, unsigned long int* arr) {
+    if (limit <= 1) return ;
 
-    // create an array with element from 0 to limit
-    int[] nums = new int[limit + 1];
-    for (int i = 0; i <= limit; i++) 
-        nums[i] = i;
+    // fill the array with element from 0 to limit
+    for (unsigned long int i = 0; i <= limit; i++)
+        arr[i] = i;
 
     // 1 is not prime
-    nums[1] = 0;
+    arr[1] = 0;
 
     // eliminate non-prime numbers from the array with Eratosthenes's
     // sieve
-    int nonZero = limit + 1; // the amount of non-zero numbers in array
-    for (int i = 0; i <= limit; i++) {
+    unsigned long int nonZero = limit + 1; // the amount of non-zero numbers in array
+    for (unsigned long int i = 0; i <= limit; i++) {
         // skip already eliminated numbers
-        if (nums[i] == 0) {
+        if (arr[i] == 0) {
             nonZero -= 1;
             continue;
         }
 
-        for (int j = nums[i] * 2; j <= limit; j += nums[i])
-            nums[j] = 0;
+        for (unsigned long int j = arr[i] * 2; j <= limit; j += arr[i])
+            arr[j] = 0;
     }
-
-    // create new element that just include non-zero number from the
-    // nums array, or just only the primes
-    int[] primes = new int[nonZero];
-    for (int i = 0, j = 0; i <= limit; i++) {
-        if (nums[i] != 0) {
-            primes[j] = nums[i];
-            j += 1;
-        }
-    }
-
-    return primes;
 }
-*/
