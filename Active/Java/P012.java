@@ -6,7 +6,6 @@ import java.util.*;
 public class P012 {
     public static void main(String[] args) {
         int divisors = 500;
-
         System.out.println(compute(divisors));
     }
     
