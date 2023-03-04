@@ -2,6 +2,7 @@
 // Problem 10: The sum of all prime numbers below 2000000
 
 #include <stdlib.h>
+#include "lib.h"
 
 unsigned long long int compute010(unsigned long int limit) {
     // declare the array, read the link for why declaring it with malloc

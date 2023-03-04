@@ -1,5 +1,5 @@
 # Find the sum of the even-valued of Fibonacci sequence
-# whose values do not exceed four million 
+# whose values do not exceed four million
 
 def compute(limit: int) -> str:
     assert limit >= 2
@@ -19,5 +19,5 @@ def compute(limit: int) -> str:
     return str(even_sum)
 
 if __name__ ==  "__main__":
-    limit: int = 4000000 # 4_000_000
+    limit: int = 4000000  # 4_000_000
     print(compute(limit))

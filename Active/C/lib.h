@@ -1,3 +1,6 @@
+#ifndef LIB_H
+#define LIB_H
+
 // to check if a number is a prime or not
 bool is_prime(unsigned long int number) {
     if (number <= 1) return false;
@@ -34,3 +37,5 @@ void eratosthenes_sieve(unsigned long int limit, unsigned long int* arr) {
             arr[j] = 0;
     }
 }
+
+#endif

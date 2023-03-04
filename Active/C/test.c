@@ -15,6 +15,7 @@
 #include "p008.h"
 #include "p009.h"
 #include "p010.h"
+#include "p011.h"
 
 int main(int argc, char *argv[]) {
     /*
@@ -29,6 +30,7 @@ int main(int argc, char *argv[]) {
     test("008", compute008( 13           ), 23514624000);
     test("009", compute009( 1000         ), 31875000);
     test("010", compute010( 2000000      ), 142913828922);
+    test("011", compute011( 4            ), 70600674);
 
     return 0;
 }
