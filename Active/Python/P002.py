@@ -18,6 +18,7 @@ def compute(limit: int) -> str:
 
     return str(even_sum)
 
-if __name__ ==  "__main__":
+
+if __name__ == "__main__":
     limit: int = 4000000  # 4_000_000
     print(compute(limit))

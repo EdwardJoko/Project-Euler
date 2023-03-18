@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 #include "tester.h"
-// lib.h is included at file p007.h
 
 /*
 */

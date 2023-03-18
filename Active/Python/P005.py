@@ -11,7 +11,7 @@ def compute(limit: int) -> str:
         while j < limit:
             if array[j] % array[i] == 0:
                 array[i] = 0
-                break;
+                break
             j += 1
         i += 1
 
@@ -36,11 +36,13 @@ def compute(limit: int) -> str:
                 if num_test % j == 0:
                     identifier += 1
                     j += 1
-                else: break
+                else:
+                    break
 
             if identifier == (limit - 1):
                 num = num_test
-            else: break
+            else:
+                break
         i += 1
 
     return str(num)

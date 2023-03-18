@@ -1,4 +1,4 @@
-# Find the product of a Pythagorean triplet that the sum is 1000 
+# Find the product of a Pythagorean triplet that the sum is 1000
 
 def compute(sum_of_pythagorean: int) -> str:
     a: int = sum_of_pythagorean - 2
@@ -12,6 +12,7 @@ def compute(sum_of_pythagorean: int) -> str:
 
             b += 1
         a -= 1
+
 
 if __name__ == "__main__":
     sum: int = 1000

@@ -12,16 +12,19 @@ def isPalindrome(num: int) -> bool:
         i += 1
     return True
 
+
 def max_num_gen(digit: int) -> int:
     """ return the biggest number of n-digit numbers """
     return int("9" * digit)
+
 
 def min_num_gen(digit: int) -> int:
     """ return the smallest number of n-digit numbers """
     return int("9" * (digit - 1)) + 1
 
+
 def compute(digit: int) -> str:
-    max_num: int = max_num_gen(digit) 
+    max_num: int = max_num_gen(digit)
     max_product: int = max_num * max_num
 
     while max_product > 0:
@@ -39,6 +42,7 @@ def compute(digit: int) -> str:
 
     return "Couldn't find the answer."
 
-if __name__ ==  "__main__":
-    digit: int = 3 
+
+if __name__ == "__main__":
+    digit: int = 3
     print(compute(digit))

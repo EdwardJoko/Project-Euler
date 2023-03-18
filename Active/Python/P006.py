@@ -9,6 +9,7 @@ def compute(limit: int) -> str:
 
     return str(square_of_sum - sum_of_squares)
 
-if __name__ ==  "__main__":
-    limit: int = 100 # 4_000_000
+
+if __name__ == "__main__":
+    limit: int = 100  # 4_000_000
     print(compute(limit))

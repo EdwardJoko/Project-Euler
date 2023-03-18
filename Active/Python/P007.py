@@ -1,6 +1,7 @@
 # Find the 10001st prime number
 
-from is_prime import is_prime 
+from is_prime import is_prime
+
 
 def compute(nth: int) -> str:
     prime_th: int = 0
@@ -15,6 +16,7 @@ def compute(nth: int) -> str:
 
     return i
 
-if __name__ ==  "__main__":
+
+if __name__ == "__main__":
     nth: int = 10001
     print(compute(nth))
