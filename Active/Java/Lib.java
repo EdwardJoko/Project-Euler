@@ -14,9 +14,9 @@ public class Lib {
         // 1 is not prime
         nums[1] = 0;
 
-        // eliminate non-prime numbers from the array with Eratosthenes's
-        // sieve
-        int nonZero = limit + 1; // the amount of non-zero numbers in array
+        // the amount of non-zero numbers in array
+        int nonZero = limit + 1; 
+        // eliminate non-prime numbers from the array with Eratosthenes' sieve
         for (int i = 0; i <= limit; i++) {
             // skip already eliminated numbers
             if (nums[i] == 0) {

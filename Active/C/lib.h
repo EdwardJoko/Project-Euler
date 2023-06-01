@@ -23,10 +23,12 @@ void eratosthenes_sieve(unsigned long int limit, unsigned long int* arr) {
     // 1 is not prime
     arr[1] = 0;
 
-    // eliminate non-prime numbers from the array with Eratosthenes's
-    // sieve
-    unsigned long int nonZero = limit + 1; // the amount of non-zero numbers in array
+    // the amount of non-zero numbers in array, or the amount of prime numbers
+    unsigned long int nonZero = limit + 1; 
+    // eliminate non-prime numbers from the array with Eratosthenes' sieve
     for (unsigned long int i = 0; i <= limit; i++) {
+    // we can do optimization by stopping the loop at i*i <= limit, but then nonZero
+    // would have inaccurate value
         // skip already eliminated numbers
         if (arr[i] == 0) {
             nonZero -= 1;
