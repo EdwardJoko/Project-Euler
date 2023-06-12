@@ -9,9 +9,7 @@ int compute001(int limit) {
         if (num % 3 == 0 || num % 5 == 0) {
             sum += num;
         }
-
         num += 1;
     }
-
     return sum;
 }

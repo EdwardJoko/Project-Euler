@@ -11,11 +11,9 @@ unsigned long int compute003(unsigned long int limit) {
             continue;
         }
         
-        while (limit % i == 0)
-            limit /= i;
+        while (limit % i == 0) limit /= i;
 
         factor = i;
     }
-
     return factor > limit ? factor : limit;
 }

@@ -15,6 +15,7 @@
 #include "p009.h"
 #include "p010.h"
 #include "p011.h"
+#include "p013.h"
 
 int main(int argc, char *argv[]) {
     /*
@@ -30,6 +31,11 @@ int main(int argc, char *argv[]) {
     test("009", compute009( 1000         ), 31875000);
     test("010", compute010( 2000000      ), 142913828922);
     test("011", compute011( 4            ), 70600674);
+    testStr(
+        "013",
+        compute013(100, 50, array_problem_13),
+        "5537376230390876637302048746832985971773659831892672"
+    );
 
     return 0;
 }

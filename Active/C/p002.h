@@ -14,6 +14,5 @@ int compute002(int limit) {
         x = y;
         y = temp + x;
     }
-
     return sum;
 }

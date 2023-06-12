@@ -18,41 +18,39 @@ bool is_palindrome(unsigned long int num) {
         int index = len - (i + 1);
         if (str[i] != str[index]) return false;
     }
-
     return true;
 }
 
 // generate the maximum number of n digit. if digit is 3, than the maxNum is 999
 unsigned long int max_num_generator(int digit) {
-    unsigned long int maxNum = 0;
-    for (int i = 0; i < digit; i++)
-        maxNum += 9 * (int)pow(10, i);
-    return maxNum;
+    unsigned long int max_num = 0;
+    for (int i = 0; i < digit; i++) max_num += 9 * (int)pow(10, i);
+    return max_num;
 }
 
 // generate the minimum number of n digit. if digit is 3, than the maxNum is 100
 unsigned long int min_num_generator(int digit) {
-    unsigned long int minNum = (int)pow(10, digit - 1);
-    return minNum;
+    unsigned long int min_num = (int)pow(10, digit - 1);
+    return min_num;
 }
 
 int compute004(int digit) {
-    unsigned long int maxNum = max_num_generator(digit);
-    unsigned long int maxProduct = maxNum * maxNum;
+    unsigned long int max_num = max_num_generator(digit);
+    unsigned long int max_product = max_num * max_num;
 
-    while (maxProduct > 0) {
-        if (is_palindrome(maxProduct)) {
-            int divider = maxNum;
-            int minNum = min_num_generator(digit);
+    while (max_product > 0) {
+        if (is_palindrome(max_product)) {
+            int divider = max_num;
+            int min_num = min_num_generator(digit);
 
-            while (divider >= minNum) {
-                if (maxProduct % divider == 0 && maxProduct/divider <= maxNum) {
-                    return maxProduct;
+            while (divider >= min_num) {
+                if (max_product % divider == 0 && max_product/divider <= max_num) {
+                    return max_product;
                 }
                 divider -= 1;
             }
         }
-        maxProduct -= 1;
+        max_product -= 1;
     }
     return -1;
 }

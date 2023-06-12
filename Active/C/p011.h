@@ -31,8 +31,7 @@ int array[20][20] = {
 int max(int *product) {
     int biggest_product = 1;
     for (int i = 0; i < 4; i++) {
-        if (product[i] > biggest_product)
-            biggest_product = product[i];
+        if (product[i] > biggest_product) biggest_product = product[i];
     }
     return biggest_product;
 }
@@ -99,7 +98,12 @@ int compute011(int adjacents) {
         }
     }
 
-    int products[4] = {horizontal_product, vertical_product, diagonal_down_right, diagonal_up_right};
+    int products[4] = {
+        horizontal_product,
+        vertical_product,
+        diagonal_down_right,
+        diagonal_up_right,
+    };
     int biggest_product = max(products);
 
     return biggest_product;
