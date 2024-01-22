@@ -1,4 +1,4 @@
-// return an array consists of prime numbers from 2 to limit
+/** return an array consists of prime numbers from 2 to limit */
 function primeGenerator(limit: number): number[] {
     if (limit <= 1) return [];
 
