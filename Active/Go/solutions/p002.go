@@ -5,7 +5,7 @@ package go_euler
 
 func Problem_002(limit int) int {
 	sum := 0
-	// the first 2 number of the Fibonacci
+	// the first 2 numbers of the Fibonacci
 	var x, y int = 1, 2
 	// temporarry variable to store intermediate value
 	var temp int = 0

@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"go_project_euler/solutions"
+	"go_euler/solutions"
 )
 
 func main() {
-	fmt.Println(go_project_euler.Problem_001())
+	fmt.Println(go_euler.Problem_001(100))
 }
