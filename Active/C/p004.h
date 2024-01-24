@@ -34,14 +34,15 @@ unsigned long int min_num_generator(int digit) {
     return min_num;
 }
 
-int compute004(int digit) {
+unsigned long int compute004(int digit) {
     unsigned long int max_num = max_num_generator(digit);
+    unsigned long int min_num = min_num_generator(digit);
     unsigned long int max_product = max_num * max_num;
+    unsigned long int min_product = min_num * min_num;
 
-    while (max_product > 0) {
+    while (max_product > min_product) {
         if (is_palindrome(max_product)) {
             int divider = max_num;
-            int min_num = min_num_generator(digit);
 
             while (divider >= min_num) {
                 if (max_product % divider == 0 && max_product/divider <= max_num) {
