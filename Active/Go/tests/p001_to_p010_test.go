@@ -121,3 +121,19 @@ func Test_005(t *testing.T) {
 		"Wrong solution for problem number 5",
 	)
 }
+
+func Test_006(t *testing.T) {
+	assert := assert.New(t)
+
+	assert.Equal(
+		go_euler.Problem_006(10),
+		2640,
+		"Wrong solution for problem number 6",
+	)
+
+	assert.Equal(
+		go_euler.Problem_006(100),
+		25164150,
+		"Wrong solution for problem number 6",
+	)
+}
