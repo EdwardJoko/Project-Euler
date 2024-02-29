@@ -71,3 +71,31 @@ func Test_Generate_Biggest_N_Digit(t *testing.T) {
 		"Generate_Biggest_N_Digit library is not working",
 	)
 }
+
+func Test_IsPrime(t *testing.T) {
+	assert := assert.New(t)
+
+	assert.Equal(
+		go_euler.IsPrime(2),
+		true,
+		"IsPrime library is not working",
+	)
+
+	assert.Equal(
+		go_euler.IsPrime(3),
+		true,
+		"IsPrime library is not working",
+	)
+	
+	assert.Equal(
+		go_euler.IsPrime(4),
+		false,
+		"IsPrime library is not working",
+	)
+
+	assert.Equal(
+		go_euler.IsPrime(5),
+		true,
+		"IsPrime library is not working",
+	)
+}
