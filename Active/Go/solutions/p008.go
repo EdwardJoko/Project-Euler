@@ -1,6 +1,6 @@
 // Project Euler
 // Problem 8: The thirteen adjacent digits in the 1000-digit number that have
-//            the greatest product.
+//            the greatest product
 
 package go_euler
 
