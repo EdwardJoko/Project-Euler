@@ -8,7 +8,7 @@ unsigned long int compute005(int limit) {
     for (int i = 0; i < limit; i++) array[i] = i + 1;
 
     // Eliminate elements that contained by bigger number, e.g. 2 is eliminated
-    // because it's containerd by 4(= 2 * 2), the same with 4 because of 8
+    // because it's contained by 4(= 2 * 2), the same with 4 because of 8
     for (int i = 0; i < limit; i++) {
         for (int j = i + 1; j < limit; j++)
             if (array[j] % array[i] == 0) {
