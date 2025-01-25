@@ -3,7 +3,7 @@
 
 unsigned long int compute003(unsigned long int limit) {
     unsigned long int i = 2;
-    unsigned long int factor = i;
+    unsigned long int factor = 1;
 
     while (i * i <= limit) {
         if (limit % i != 0) {

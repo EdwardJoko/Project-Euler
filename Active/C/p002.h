@@ -1,5 +1,5 @@
 // Project Euler
-// Problem 2: The sum of even Fibonacci number under 4000000
+// Problem 2: The sum of even Fibonacci number under 4_000_000
 
 int compute002(int limit) {
     int x = 0;  // the first  number of Fibonacci

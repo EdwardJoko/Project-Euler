@@ -14,7 +14,7 @@ void test(char str[], unsigned long long int result, unsigned long long int answ
     }
 }
 
-void testStr(char str[], char * result, char * answer) {
+void testStr(char str[], char *result, char *answer) {
     // strcmp return 0 if both string are the same
     if (!strcmp(result, answer)) {
         printf("Solution for problem %s is correct.\n", str);

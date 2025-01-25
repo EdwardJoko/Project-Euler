@@ -26,7 +26,7 @@ unsigned long int compute005(int limit) {
 
     // Brute force. Remove all the extra unnecessary factors
     for (int divider = 2; divider <= limit; divider++) {
-        // the loop is because in case num is divisible by i multiple times
+        // the loop is because in case num is divisible by divider multiple times
         while (num % divider == 0) {
             unsigned long int num_test = num / divider;
             int identifier = 0;

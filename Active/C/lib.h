@@ -5,6 +5,19 @@
 #include <string.h>
 #include <math.h> // README! add " -lm" when compiling this file
 
+// generate the maximum number of n digit. if digit is 3, then the maxNum is 999
+unsigned long int max_num_generator(int digit) {
+    unsigned long int max_num = 0;
+    for (int i = 0; i < digit; i++) max_num += 9 * (unsigned long int)pow(10, i);
+    return max_num;
+}
+
+// generate the minimum number of n digit. if digit is 3, then the maxNum is 100
+unsigned long int min_num_generator(int digit) {
+    unsigned long int min_num = (unsigned long int)pow(10, digit - 1);
+    return min_num;
+}
+
 bool is_palindrome(unsigned long int num) {
     // convert the integer to string
     char str[256];
@@ -18,19 +31,6 @@ bool is_palindrome(unsigned long int num) {
         if (str[i] != str[index]) return false;
     }
     return true;
-}
-
-// generate the maximum number of n digit. if digit is 3, then the maxNum is 999
-unsigned long int max_num_generator(int digit) {
-    unsigned long int max_num = 0;
-    for (int i = 0; i < digit; i++) max_num += 9 * (unsigned long int)pow(10, i);
-    return max_num;
-}
-
-// generate the minimum number of n digit. if digit is 3, then the maxNum is 100
-unsigned long int min_num_generator(int digit) {
-    unsigned long int min_num = (unsigned long int)pow(10, digit - 1);
-    return min_num;
 }
 
 // to check if a number is a prime or not

@@ -13,7 +13,10 @@
 #include "p009.h"
 #include "p010.h"
 #include "p011.h"
+// include 12
 #include "p013.h"
+#include "p014.h"
+#include <stdio.h>
 
 int main(int argc, char *argv[]) {
     /*
@@ -29,11 +32,13 @@ int main(int argc, char *argv[]) {
     test("009", compute009( 1000         ), 31875000);
     test("010", compute010( 2000000      ), 142913828922);
     test("011", compute011( 4            ), 70600674);
+    printf("Problem 012 is not done yet.\n");
     testStr(
         "013",
         compute013(100, 50, array_problem_13),
         "5537376230390876637302048746832985971773659831892672"
     );
+    test("014", compute014( 1000000      ), 837799);
 
     return 0;
 }
