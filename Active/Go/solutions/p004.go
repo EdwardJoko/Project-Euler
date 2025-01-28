@@ -6,6 +6,7 @@ package go_euler
 
 import (
 	"go_euler/lib"
+	"log"
 	"strconv"
 )
 
@@ -23,15 +24,21 @@ import (
 // After that the other algorithm becomes too slow and it took a really
 // long time to print the solution.
 func Problem_004(digit int) string {
-	product := ""
-	smallest_n_digit := go_euler.Generate_Smallest_N_Digit(digit)
-	biggest_n_digit := go_euler.Generate_Biggest_N_Digit(digit)
+	smallest_n_digit, err := go_euler.Generate_Smallest_N_Digit(digit)
+	if err != nil {
+		log.Fatal(err)
+	}
+	biggest_n_digit, err := go_euler.Generate_Biggest_N_Digit(digit)
+	if err != nil {
+		log.Fatal(err)
+	}
 
+	product := ""
 	factor_1 := biggest_n_digit
-	for step := 1; step < 10; step += 1 {
-		for factor_1 >= biggest_n_digit-(smallest_n_digit*step)+1 {
+	for step := 1; step < 10; step++ {
+		for factor_1 >= (biggest_n_digit+1)-(smallest_n_digit*step) {
 			factor_2 := biggest_n_digit - (smallest_n_digit * (step - 1))
-			for factor_2 >= biggest_n_digit-(smallest_n_digit*step)+1 {
+			for factor_2 >= (biggest_n_digit+1)-(smallest_n_digit*step) {
 				product = strconv.Itoa(factor_1 * factor_2)
 
 				if go_euler.IsPalindrome(product) {

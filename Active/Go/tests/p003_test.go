@@ -30,6 +30,6 @@ func Test_003(t *testing.T) {
 	assert.Equal(
 		go_euler.Problem_003(600_851_475_143),
 		6857,
-		"Wrong solution for problem number 2",
+		"Wrong solution for problem number 3",
 	)
 }

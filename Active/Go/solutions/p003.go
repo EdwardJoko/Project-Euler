@@ -6,7 +6,7 @@ package go_euler
 func Problem_003(limit int) int {
 	// 2 is the first prime that we use to factor the limit
 	factor := 2
-	biggest_factor := 0
+	biggest_factor := 1
 
 	for factor*factor <= limit {
 		if limit%factor != 0 {

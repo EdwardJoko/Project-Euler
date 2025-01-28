@@ -7,12 +7,11 @@ package go_euler
 func Problem_005(limit int) int {
 	// init the array
 	var numbers = make([]int, limit)
-	for i := 1; i <= limit; i++ {
-		numbers[i-1] = i
+	for i := 0; i < limit; i++ {
+		numbers[i] = i + 1
 	}
 
-	// Eliminate elements that have multipliers above itself but still within
-	// the limit
+	// Eliminate elements that's contained by bigger number
 	for i := 0; i < limit; i++ {
 		for j := i + 1; j < limit; j++ {
 			if numbers[j]%numbers[i] == 0 {
@@ -45,6 +44,7 @@ func Problem_005(limit int) int {
 				}
 			}
 
+			// limit - 1 because we didn't divide it with number 1
 			if identifier == (limit - 1) {
 				product = product_test
 			} else {
