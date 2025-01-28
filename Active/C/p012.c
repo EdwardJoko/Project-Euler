@@ -14,15 +14,33 @@ unsigned int divisors_counter(unsigned int num) {
     return factors;
 }
 
-unsigned int compute012(int divisors_limit) {
+int main(int argc, char **argv) {
     unsigned int divisors = 0;
     unsigned int i = 1;
     unsigned int triangle_number = 0;
 
-    while (divisors <= divisors_limit) {
+    while (divisors <= 500) {
         triangle_number += i;
         divisors = divisors_counter(triangle_number);
+        /*
+        printf("triangle numbers: %u\n", triangle_number);
+        printf("divisors: %u\n", divisors);
+        */
         i += 1;
     }
-    return triangle_number;
+    printf("%u\n", triangle_number);
+
+    divisors = 0;
+    i = 1;
+    for (triangle_number = 1; divisors <= 500; triangle_number += i) {
+        divisors = divisors_counter(triangle_number);
+        /*
+        printf("triangle numbers: %u\n", triangle_number);
+        printf("divisors: %u\n", divisors);
+        */
+        i += 1;
+    }
+    printf("%u\n", triangle_number - i);
+
+    return 0;
 }
